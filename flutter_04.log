@@ -1,0 +1,94 @@
+Flutter crash report; please file at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter build flx --suppress-analytics --target C:\Users\Angius\AndroidStudioProjects\flutterbooru\lib\main.dart --output-file C:\Users\Angius\AndroidStudioProjects\flutterbooru\build\app\intermediates\flutter\debug/app.flx --depfile C:\Users\Angius\AndroidStudioProjects\flutterbooru\build\app\intermediates\flutter\debug/snapshot_blob.bin.d --snapshot C:\Users\Angius\AndroidStudioProjects\flutterbooru\build\app\intermediates\flutter\debug/snapshot_blob.bin --working-dir C:\Users\Angius\AndroidStudioProjects\flutterbooru\build\app\intermediates\flutter\debug/flutter_assets
+
+## exception
+
+FileSystemException: FileSystemException: Exists failed, path = 'C:\Users\Angius\AndroidStudioProjects\flutterbooru\build\app\intermediates\flutter\debug/flutter_assets' (OS Error: Odmowa dostępu.
+, errno = 5)
+
+```
+#0      _Directory.existsSync (dart:io/directory_impl.dart:73)
+#1      _Directory.createSync (dart:io/directory_impl.dart:105)
+#2      _LocalFileSystemEntity&ForwardingDirectory.createSync (package:file/src/forwarding/forwarding_directory.dart:19)
+#3      _ArchiveZipBuilder.createZip (package:flutter_tools/src/zip.dart:38)
+<asynchronous suspension>
+#4      assemble (package:flutter_tools/src/flx.dart:178)
+<asynchronous suspension>
+#5      build (package:flutter_tools/src/flx.dart:104)
+<asynchronous suspension>
+#6      BuildFlxCommand.runCommand (package:flutter_tools/src/commands/build_flx.dart:50)
+<asynchronous suspension>
+#7      FlutterCommand.verifyThenRunCommand (package:flutter_tools/src/runner/flutter_command.dart:290)
+<asynchronous suspension>
+#8      FlutterCommand.run (package:flutter_tools/src/runner/flutter_command.dart:228)
+<asynchronous suspension>
+#9      CommandRunner.runCommand (package:args/command_runner.dart:194)
+<asynchronous suspension>
+#10     FlutterCommandRunner.runCommand (package:flutter_tools/src/runner/flutter_command_runner.dart:286)
+<asynchronous suspension>
+#11     CommandRunner.run.<anonymous closure> (package:args/command_runner.dart:109)
+#12     new Future.sync (dart:async/future.dart:222)
+#13     CommandRunner.run (package:args/command_runner.dart:109)
+#14     FlutterCommandRunner.run (package:flutter_tools/src/runner/flutter_command_runner.dart:166)
+#15     run.<anonymous closure> (package:flutter_tools/runner.dart:90)
+<asynchronous suspension>
+#16     AppContext._run (package:flutter_tools/src/base/context.dart:76)
+<asynchronous suspension>
+#17     AppContext.runInZone.<anonymous closure> (package:flutter_tools/src/base/context.dart:66)
+#18     _rootRun (dart:async/zone.dart:1126)
+#19     _CustomZone.run (dart:async/zone.dart:1023)
+#20     runZoned (dart:async/zone.dart:1501)
+#21     AppContext.runInZone (package:flutter_tools/src/base/context.dart:65)
+#22     run (package:flutter_tools/runner.dart:61)
+<asynchronous suspension>
+#23     main (package:flutter_tools/executable.dart:48)
+<asynchronous suspension>
+#24     main (file:///D:/Tools/flutter/packages/flutter_tools/bin/flutter_tools.dart:16)
+#25     _startIsolate.<anonymous closure> (dart:isolate-patch/dart:isolate/isolate_patch.dart:277)
+#26     _RawReceivePortImpl._handleMessage (dart:isolate-patch/dart:isolate/isolate_patch.dart:165)
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel beta, v0.2.3, on Microsoft Windows [Version 10.0.16299.309], locale pl-PL)
+    • Flutter version 0.2.3 at D:\Tools\flutter
+    • Framework revision 5a58b36e36 (4 weeks ago), 2018-03-13 13:20:13 -0700
+    • Engine revision e61bb9ac3a
+    • Dart version 2.0.0-dev.35.flutter-290c576264
+
+[✓] Android toolchain - develop for Android devices (Android SDK 27.0.3)
+    • Android SDK at C:\Users\Angius\AppData\Local\Android\sdk
+    • Android NDK location not configured (optional; useful for native profiling support)
+    • Platform android-27, build-tools 27.0.3
+    • Java binary at: C:\Program Files\Android\Android Studio\jre\bin\java
+    • Java version OpenJDK Runtime Environment (build 1.8.0_152-release-1024-b02)
+    • All Android licenses accepted.
+
+[✓] Android Studio (version 3.1)
+    • Android Studio at C:\Program Files\Android\Android Studio
+    • Java version OpenJDK Runtime Environment (build 1.8.0_152-release-1024-b02)
+
+[✓] IntelliJ IDEA Ultimate Edition (version 2017.3)
+    • IntelliJ at C:\Program Files\JetBrains\IntelliJ IDEA 2017.3.1
+    • Flutter plugin version 23.1.2
+    • Dart plugin version 173.4700
+
+[!] VS Code, 32-bit edition
+    • VS Code at C:\Program Files (x86)\Microsoft VS Code
+    • Dart Code extension not installed; install from
+      https://marketplace.visualstudio.com/items?itemName=Dart-Code.dart-code
+
+[!] VS Code, 64-bit edition (version 1.22.1)
+    • VS Code at C:\Program Files\Microsoft VS Code
+    • Dart Code extension not installed; install from
+      https://marketplace.visualstudio.com/items?itemName=Dart-Code.dart-code
+
+[✓] Connected devices (1 available)
+    • Redmi 4 • 78d6ce957d83 • android-arm64 • Android 6.0.1 (API 23)
+
+! Doctor found issues in 2 categories.
+```
